@@ -825,7 +825,7 @@
           <li><a href="#contact">Contacto</a></li>
         </ul>
         <div class="nav-actions">
-          <a href="https://wa.me/4612699379" target="_blank" class="btn btn-outline" style="padding:10px 22px;">
+          <a href="https://wa.me/524612699379" target="_blank" class="btn btn-outline" style="padding:10px 22px;">
             <i class="fab fa-whatsapp"></i> WhatsApp
           </a>
           <button class="cart-btn" onclick="openCart()" aria-label="Abrir carrito">
@@ -846,7 +846,7 @@
     <a href="#catalog" onclick="closeMobileMenu()">Catálogo</a>
     <a href="#about"   onclick="closeMobileMenu()">Nosotros</a>
     <a href="#contact" onclick="closeMobileMenu()">Contacto</a>
-    <a href="https://wa.me/4612699379" target="_blank" style="color:var(--gold)">
+    <a href="https://wa.me/524612699379" target="_blank" style="color:var(--gold)">
       <i class="fab fa-whatsapp"></i> WhatsApp
     </a>
   </nav>
@@ -872,7 +872,7 @@
           <a href="#catalog" class="btn btn-gold">
             <i class="fas fa-sparkles"></i> Ver catálogo
           </a>
-          <a href="https://wa.me/" target="_blank" class="btn btn-wa">
+          <a href="https://wa.me/524612699379" target="_blank" class="btn btn-wa">
             <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
           </a>
         </div>
@@ -1010,7 +1010,7 @@
           <h3>Estamos para ayudarte</h3>
           <p>Puedes preguntarnos por disponibilidad, aromas, combos o simplemente platicarnos qué tipo de fragancia buscas. Respondemos rápido.</p>
           <div class="social-links">
-            <a href="https://wa.me/4612699379?text=Hola%2C%20me%20interesa%20un%20decant%20de%20Mavora"
+            <a href="https://wa.me/524612699379?text=Hola%2C%20me%20interesa%20un%20decant%20de%20Mavora"
                target="_blank" class="social-link wa-link">
               <i class="fab fa-whatsapp"></i>
               <div class="link-text">
@@ -1079,7 +1079,7 @@
       <div class="footer-bottom">
         <p>© 2025 Mavora. Todos los derechos reservados. · Decants originales · México</p>
         <div class="footer-social">
-          <a href="https://wa.me/4612699379" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://wa.me/524612699379" target="_blank"><i class="fab fa-whatsapp"></i></a>
           <a href="https://instagram.com/mavora.celaya" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
@@ -1123,6 +1123,12 @@
   ============================================================ -->
   <script>
     // ============================================================
+    // CONFIGURACIÓN — edita solo aquí
+    // ============================================================
+    const WA_NUMBER = '524612699379';          // número con código de país (52) + lada + número
+    const IG_USER   = 'mavora.celaya';         // usuario de Instagram sin @
+
+    // ============================================================
     // DATOS DE PRODUCTOS
     // ── Edita aquí precios, stock y notas fácilmente ──
     // ============================================================
@@ -1165,7 +1171,7 @@
         projection: 'Alta · Beast mode',
         occasions:  ['Noche', 'Salida', 'Verano', 'Gym'],
         sensation:  'Magnético, frío, intenso y duradero',
-        prices:     { '5ml': 120, '10ml': 220 },
+        prices:     { '5ml': 120, '10ml': 180 },
         stock:      { '5ml': 3, '10ml': 2 },
         badge:      'Exclusivo'
       },
@@ -1414,7 +1420,7 @@
       }, 0);
       lines.push(`%0ATotal: ${formatPrice(total)}`);
       lines.push('%0A%0A¿Cómo procedo con el pago y envío?');
-      return `https://wa.me/5210000000000?text=${lines.join('%0A').replace(/ /g, '%20')}`;
+      return `https://wa.me/${WA_NUMBER}?text=${lines.join('%0A').replace(/ /g, '%20')}`;
     }
 
     function openCart() {
@@ -1539,7 +1545,7 @@
 
     function buildWAForProduct(product) {
       const msg = `Hola,%20me%20interesa%20el%20decant%20${encodeURIComponent(product.name)}%20de%20Mavora.%20¿Tienen%20disponibilidad?`;
-      return `https://wa.me/5210000000000?text=${msg}`;
+      return `https://wa.me/${WA_NUMBER}?text=${msg}`;
     }
 
     function closeModal() {
@@ -1560,7 +1566,7 @@
       const name = document.getElementById('f-name').value.trim();
       const msg  = document.getElementById('f-message').value.trim();
       const text = `Hola,%20soy%20${encodeURIComponent(name)}.%0A${encodeURIComponent(msg)}`;
-      window.open(`https://wa.me/5210000000000?text=${text}`, '_blank');
+      window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, '_blank');
     }
 
     // ============================================================
